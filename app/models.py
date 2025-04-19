@@ -12,7 +12,7 @@ class User(SQLModel, table=True):
     photo: str = Field(default=None)
     artist: Optional["Artist"] = Relationship(
         back_populates="user", sa_relationship_kwargs={"uselist": False}
-    )  # Modification ici
+    )
 
 
 class Genre(SQLModel, table=True):
